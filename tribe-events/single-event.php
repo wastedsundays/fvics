@@ -127,14 +127,22 @@ $cost  = tribe_get_formatted_cost( $event_id );
 
 	<!-- Showing sponsors on bottom of event page -->
 			<?php $sponsors = get_field('event_sponsors'); ?>
+			<?php if ( !empty( $sponsors ) ): ?> <p>Thank You to Our Sponsors</p> 
+				<div class="sponsor-section">
+					<?php foreach($sponsors as $sponsor):?>
+						<div>
+							<?php $photo = get_field('sponsor_logo', $sponsor->ID);?>
+							<?php $url = get_field('sponsor_website', $sponsor->ID);?>
+							<a href=<?php echo esc_url($url); ?>>
+								<img src=<?php echo esc_url($photo['url']); ?> alt="<?php ($photo['alt']) ?>Logo" class="sponsor-logo"/>
+							</a>
+							<?php echo get_the_title( $sponsor->ID); ?>
+						</div>
 
-			<?php foreach($sponsors as $sponsor):?>
-				<?php $photo = get_field('sponsor_logo', $sponsor->ID);?>
-				<?php $url = get_field('sponsor_website', $sponsor->ID);?>
-				<?php echo $photo; echo $url; ?>
-				<?php echo get_the_title( $sponsor->ID); ?>
-
-			<?php endforeach;?>
+					<?php endforeach;?>
+				</div>
+			<?php endif ?>
+	<!-- End of Sponsor Section -->
 
 	<!-- Event footer -->
 	<div id="tribe-events-footer">
