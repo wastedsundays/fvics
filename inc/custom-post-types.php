@@ -7,7 +7,7 @@ function ah_register_custom_post_types() {
         'singular_name'      => _x( 'Sponsor', 'post type singular name'  ),
         'menu_name'          => _x( 'Sponsors', 'admin menu'  ),
         'name_admin_bar'     => _x( 'Sponsor', 'add new on admin bar' ),
-        'add_new'            => _x( 'Add New', 'sponsor' ),
+        'add_new'            => _x( 'Add Sponsor', 'sponsor' ),
         'add_new_item'       => __( 'Add New Sponsor' ),
         'new_item'           => __( 'New Sponsor' ),
         'edit_item'          => __( 'Edit Sponsor' ),
