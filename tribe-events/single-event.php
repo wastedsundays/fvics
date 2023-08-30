@@ -133,7 +133,7 @@ $cost  = tribe_get_formatted_cost( $event_id );
 						<div>
 							<?php $photo = get_field('sponsor_logo', $sponsor->ID);?>
 							<?php $url = get_field('sponsor_website', $sponsor->ID);?>
-							<a href=<?php echo esc_url($url); ?>>
+							<a href=<?php echo esc_url($url); ?> target="_blank" rel="noopener noreferrer">
 								<img src=<?php echo esc_url($photo['url']); ?> alt="<?php ($photo['alt']) ?>Logo" class="sponsor-logo"/>
 							</a>
 							<?php echo get_the_title( $sponsor->ID); ?>
@@ -143,6 +143,15 @@ $cost  = tribe_get_formatted_cost( $event_id );
 				</div>
 			<?php endif ?>
 	<!-- End of Sponsor Section -->
+
+	<!-- Showing the Document download section -->
+		<?php $file = get_field('event_document');
+			  $description = get_field('document_description');
+			if( $file ): ?>
+				<p><?php echo $description; ?></p>
+    			<a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
+		<?php endif; ?>
+	<!-- end of document download section -->
 
 	<!-- Event footer -->
 	<div id="tribe-events-footer">
