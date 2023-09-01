@@ -181,3 +181,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/custom-post-types.php';
 
+/**
+ * Enqueue slick carousel
+ */
+add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
+function slick_register_styles() {
+wp_enqueue_style( 'slick-css', untrailingslashit( get_template_directory_uri() ) . '/assets/src/library/css/slick.css', [], false, 'all' );
+wp_enqueue_style( 'slick-theme-css', untrailingslashit( get_template_directory_uri() ) . '/assets/src/library/css/slick-theme.css', ['slick-css'], false, 'all' );
+
+}
+
+add_action ('wp_enqueue_scripts', 'slick_register_scripts' );
+function slick_register_scripts() {
+wp_enqueue_script( 'carousel-js', untrailingslashit( get_template_directory_uri() ) . '/assets/src/carousel/index.js', ['jquery'], filemtime( untrailingslashit( get_template_directory() ) . '/assets/src/carousel/index.js' ), true );
+wp_enqueue_script( 'carousel-min', untrailingslashit( get_template_directory_uri() ). '/assets/src/library/js/slick.min.js', ['jquery'], filemtime( untrailingslashit( get_template_directory() ) . '/assets/src/library/js/slick.min.js '), true );
+}
