@@ -29,7 +29,7 @@ get_header();
    </div>
    <!--Slide Two-->
    <div class="card">
-      <img width="500" height="233" src="https://via.placeholder.com/150" class="w-100" alt="alt-text">
+      <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
       <div class="card-body">
          <h3 class="card-title">Your Post heading1</h3>
          <p>Your Post Excerpt</p>
@@ -54,13 +54,22 @@ get_header();
    </div>
 </div>
 
+<section>
+   <div>
+      This is the left side
+   </div>
+   <div>
+      <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
+   </div>
+</section>
+
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		// while ( have_posts() ) :
+			// the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			// get_template_part( 'template-parts/content', 'page' );
 
-		endwhile; // End of the loop.
+		// endwhile; // End of the loop.
 		?>
 
 	</main><!-- #main -->
