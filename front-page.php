@@ -20,7 +20,7 @@ get_header();
 	<div class="posts-carousel px-5">
    <!--Slide One-->
    <div class="card">
-      <img width="350" height="233" src="https://via.placeholder.com/150" class="w-100" alt="alt-text">
+   <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
       <div class="card-body">
          <h3 class="card-title">Your Post heading0</h3>
          <p>Your Post Excerpt</p>
@@ -38,7 +38,7 @@ get_header();
    </div>
    <!-- Slide Three -->
    <div class="card">
-      <img width="350" height="233" src="https://via.placeholder.com/150" class="w-100" alt="alt-text">
+   <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
       <div class="card-body">
          <h3 class="card-title">Your Post heading2</h3>
          <p>Your Post Excerpt</p>
@@ -47,7 +47,7 @@ get_header();
    </div>
    <!-- Slide Four -->
    <div class="card">
-      <img width="350" height="233" src="https://via.placeholder.com/150" class="w-100" alt="alt-text">
+   <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
       <div class="card-body">
          <h3 class="card-title">Your Post heading3</h3>
          <p>Your Post Excerpt</p>
@@ -109,9 +109,8 @@ get_header();
       <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
    </div>
    <div>
-      <p>right side of the events section</p>
-      <p>this one has a "blurb" about galleries and past events</p>
-      <p>The image over there is the most recent 'past' event that's been posted as a gallery or recap</p>
+      <h2>Event Galleries</h2>
+      <p><?php the_field('event_galleries_message', 114); ?></p>
       <button>See Event Galleries</button>
    </div>
 </section>
@@ -141,17 +140,6 @@ get_header();
       <button>contact us</button>
    </div>
 </section>
-
-
-
-		<?php
-		// while ( have_posts() ) :
-			// the_post();
-
-			// get_template_part( 'template-parts/content', 'page' );
-
-		// endwhile; // End of the loop.
-		?>
 
 	</main><!-- #main -->
 
