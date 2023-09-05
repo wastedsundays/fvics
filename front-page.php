@@ -90,9 +90,13 @@ get_header();
 <!-- Events Section Left Side Text -->
 <section class="home-page-grid">
    <div>
-
-      <p>This is the left side, where the calendar widget is going to go</p>
-      <p>The other side will be the featured image from the most recent event. Featured or otherwise</p>
+      <?php
+         $your_query = new WP_Query( 'pagename=home' );
+         while ( $your_query->have_posts() ) : $your_query->the_post();
+            the_content();
+         endwhile;
+         wp_reset_postdata();
+      ?>
    </div>
    <div>
       <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
