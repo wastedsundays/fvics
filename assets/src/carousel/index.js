@@ -12,6 +12,8 @@ jQuery( document ).ready( function( $ ) {
             autoplaySpeed: 5000,
             dots: true,
             fade: true,
+            prevArrow: false,
+            nextArrow: false,
         } );
       }
     }

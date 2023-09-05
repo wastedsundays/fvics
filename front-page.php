@@ -70,7 +70,7 @@ get_header();
 </section>
 
 <!-- News section - uses two images side by side with a small gap in between.  -->
-<section>
+<section class="home-page-grid">
    <!-- this div uses the most recent news article, with the featured image -->
    <div>
       <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
