@@ -17,42 +17,43 @@ $pagenum = 114;
 <main id="primary" class="site-main">
 
 	<div class="posts-carousel px-5">
+
+      <?php
+         $carouselargs = array(
+            'post_type' => 'post',
+            // 'category_name' => 'featured',
+            'posts_per_page' => 3
+
+         );
+
+
+         $carousel_query = new WP_Query( $carouselargs );
+
+         if ( $carousel_query -> have_posts() ) {
+
+            while ( $carousel_query -> have_posts() ) {
+               $carousel_query -> the_post();
+      ?>
+      <div class="card">
+      <?php the_post_thumbnail( 'full' );?>
+      <h3 class="article-thumb-title"><?php the_title(); ?></h3>                    
+      </div>
+      <?php
+            }
+            wp_reset_postdata();
+         } 
+      ?>
+
       <!--Slide One-->
       <div class="card">
       <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
          <div class="card-body">
-            <h3 class="card-title">Your Post heading0</h3>
-            <p>Your Post Excerpt</p>
-            <a href="#" class="btn btn-primary">View More</a>
+            <h3 class="card-title">Join Us</h3>
+            <p>Become a Member Today</p>
+            <a href="#" class="btn btn-primary">Join Us</a>
          </div>
       </div>
-      <!--Slide Two-->
-      <div class="card">
-         <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
-         <div class="card-body">
-            <h3 class="card-title">Your Post heading1</h3>
-            <p>Your Post Excerpt</p>
-            <a href="#" class="btn btn-primary">View More</a>
-         </div>
-      </div>
-      <!-- Slide Three -->
-      <div class="card">
-      <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
-         <div class="card-body">
-            <h3 class="card-title">Your Post heading2</h3>
-            <p>Your Post Excerpt</p>
-            <a href="#" class="btn btn-primary">View More</a>
-         </div>
-      </div>
-      <!-- Slide Four -->
-      <div class="card">
-      <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
-         <div class="card-body">
-            <h3 class="card-title">Your Post heading3</h3>
-            <p>Your Post Excerpt</p>
-            <a href="#" class="btn btn-primary">View More</a>
-         </div>
-      </div>
+
    </div>
 
    <!-- 'Welcome' Section -->
