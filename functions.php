@@ -46,6 +46,10 @@ function fvics_adamh_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'align-full' );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
