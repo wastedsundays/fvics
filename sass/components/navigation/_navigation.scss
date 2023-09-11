@@ -1,6 +1,6 @@
 .main-navigation {
 	display: block;
-	width: 100%;
+	// width: 100%;
 
 	ul {
 		display: none;
@@ -110,6 +110,11 @@
 
 #masthead {
 	img {
-		width: 100px;
+		width: 80px;
+		margin: 10px;
+
+		@media screen and (min-width: 33.75rem) {
+			width: 100px;
+		}
 	}
 }
