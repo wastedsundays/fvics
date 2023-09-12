@@ -19,10 +19,11 @@ $pagenum = 114;
 	<div class="posts-carousel px-5">
 
       <?php
+         $posttypes = array ('post','tribe_events');
          $carouselargs = array(
-            'post_type' => 'post',
+            'post_type' => $posttypes,
             // 'category_name' => 'featured',
-            'posts_per_page' => 3
+            'posts_per_page' => 5
 
          );
 
@@ -38,7 +39,14 @@ $pagenum = 114;
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
             <p class="article-thumb-title"><?php the_title(); ?></p>
-            <button>Do Thing</button>
+            <button>
+               
+               <?php if(get_post_type() === 'tribe_events') {
+                  ?>Register<?php 
+                  }else {
+                     ?>See More<?php
+                  };?>
+            </button>
          </div>                    
       </div>
       <?php
@@ -138,7 +146,7 @@ $pagenum = 114;
 
    <!-- Events Section -->
    <section class="page-section">
-
+      <h2>Events</h2>
       <div class="home-page-grid">
          <div>
             <?php
@@ -192,10 +200,10 @@ $pagenum = 114;
 
    <!-- Contact section -->
    <section class="page-section">
-
+      <h2>Say Hello!</h2>
       <div class="home-page-grid">
          <div>
-            <h2>Our Directors</h2>
+            <h3>Our Directors</h3>
             <p><?php the_field('directors_section_message', $pagenum); ?></p>
             <button>Meet our directors</button>
          </div>
@@ -221,7 +229,7 @@ $pagenum = 114;
             ?>
          </div>
          <div>
-            <h2>Contact Us</h2>
+            <h3>Contact Us</h3>
             <p><?php the_field('contact_section_message', $pagenum); ?></p>
             <button>Contact Us</button>
          </div>
