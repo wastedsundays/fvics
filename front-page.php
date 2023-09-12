@@ -35,8 +35,11 @@ $pagenum = 114;
                $carousel_query -> the_post();
       ?>
       <div class="card">
-      <?php the_post_thumbnail( 'full' );?>
-      <h3 class="article-thumb-title"><?php the_title(); ?></h3>                    
+         <?php the_post_thumbnail( 'full' );?>
+         <div class="card-body">
+            <h3 class="article-thumb-title"><?php the_title(); ?></h3>
+            <button>Do Thing</button>
+         </div>                    
       </div>
       <?php
             }
@@ -50,7 +53,7 @@ $pagenum = 114;
          <div class="card-body">
             <h3 class="card-title">Join Us</h3>
             <p>Become a Member Today</p>
-            <a href="#" class="btn btn-primary">Join Us</a>
+            <button>Join Us</button>
          </div>
       </div>
 
