@@ -1,9 +1,8 @@
 @font-face {
     font-family: 'semplicita';
-    src: url('localhost/fvics/wp-content/themes/fvics_adamh/fonts/SemplicitaMedium.otf'),
-            url('/fonts/semplicita_medium-webfont.woff2') format('woff2'),
-         url('/fonts/semplicita_medium-webfont.woff') format('woff');
-}
+    src:  url('fonts/semplicita_medium-webfont.woff2') format('woff2'),
+            url('fonts/semplicita_medium-webfont.woff') format('woff');
+    }
 
 
 // stylelint-disable value-keyword-case
