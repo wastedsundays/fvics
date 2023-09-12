@@ -16,7 +16,8 @@
     -ms-touch-action: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
-    height: 700px;
+    /* height: 700px; */
+    height: 100vh;
 }
 
 .slick-list

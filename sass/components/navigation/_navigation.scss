@@ -135,8 +135,8 @@
 }
 
 .menu-menu-1-container {
-	// background-color: white;
-	background: linear-gradient(90deg, rgba(44,144,0,1) 0%, rgba(166,208,148,1) 1%, rgba(255,255,255,1) 2%, rgba(255,255,255,1) 98%, rgba(241,222,222,1) 99%, rgba(255,0,0,1) 100%);
+	background: linear-gradient(90deg, rgba(44,144,0,1) 0%, rgba(166,208,148,1) 1%, rgba(255,255,255,.7) 2%, rgba(255,255,255,.7) 98%, rgba(200,100,110,1) 99%, rgba(255,0,0,1) 100%);
+	backdrop-filter: blur(8px) grayscale(.5);
 	display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +145,7 @@
 	right: 0;
 	height: 100vh;
 	top: -100vh;
-	transition: 1s;
+	transition: .5s;
 
 	a {
 		padding: 1rem 0;
@@ -162,7 +162,7 @@
 }
 
 #primary-menu {
-	background-color: lightgray;
+	// background-color: lightgray;
 	width: fit-content;
 	margin: 0 auto;
 	padding: 0 2rem;

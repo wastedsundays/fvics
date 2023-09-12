@@ -5,23 +5,6 @@
          url('/fonts/semplicita_medium-webfont.woff') format('woff');
 }
 
-@font-face {
-    font-family: 'semplicitbold';
-    src: url('/fonts/semplicita_bold-webfont.woff2') format('woff2'),
-         url('/fonts/semplicita_bold-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'semplicitmedium_italic';
-    src: url('/fonts/semplicita_medium_italic-webfont.woff2') format('woff2'),
-         url('/fonts/semplicita_medium_italic-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'semplicitombra';
-    src: url('/fonts/semplicita_ombra-webfont.woff2') format('woff2'),
-         url('/fonts/semplicita_ombra-webfont.woff') format('woff');
-}
 
 // stylelint-disable value-keyword-case
 // $font__main: "semplicitmedium";

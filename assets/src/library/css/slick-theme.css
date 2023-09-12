@@ -139,18 +139,21 @@
     position: relative;
 
     display: inline-block;
-    background-color: orange;
+    background-color: white;
+    border: 1px solid rgb(34, 100, 50);
 
     width: 20px;
     height: 20px;
     margin: 0 5px;
     padding: 0;
+    border-radius: 50%;
 
     cursor: pointer;
 }
 
 li.slick-active {
-    background-color: green;
+    background-color: rgb(227, 5, 33);
+    border-color: rgb(227, 5, 33);
 }
 .slick-dots li button
 {
@@ -174,6 +177,7 @@ li.slick-active {
 .slick-dots li button:focus
 {
     outline: none;
+
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
@@ -193,7 +197,7 @@ li.slick-active {
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '';
     text-align: center;
 
     opacity: .25;
