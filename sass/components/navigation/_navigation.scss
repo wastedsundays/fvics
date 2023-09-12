@@ -135,7 +135,8 @@
 }
 
 .menu-menu-1-container {
-	background-color: white;
+	// background-color: white;
+	background: linear-gradient(90deg, rgba(44,144,0,1) 0%, rgba(166,208,148,1) 1%, rgba(255,255,255,1) 2%, rgba(255,255,255,1) 98%, rgba(241,222,222,1) 99%, rgba(255,0,0,1) 100%);
 	display: flex;
     flex-direction: column;
     justify-content: center;
