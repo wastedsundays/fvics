@@ -37,7 +37,7 @@ $pagenum = 114;
       <div class="card">
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
-            <h3 class="article-thumb-title"><?php the_title(); ?></h3>
+            <p class="article-thumb-title"><?php the_title(); ?></p>
             <button>Do Thing</button>
          </div>                    
       </div>
@@ -51,7 +51,7 @@ $pagenum = 114;
       <div class="card">
       <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
          <div class="card-body">
-            <h3 class="card-title">Join Us</h3>
+            <p class="article-thumb-title">Join Us</p>
             <p>Become a Member Today</p>
             <button>Join Us</button>
          </div>
@@ -60,7 +60,7 @@ $pagenum = 114;
    </div>
 
    <!-- 'Welcome' Section -->
-   <section>
+   <section class="page-section">
       <div class="home-page-grid">
          <div>
             <h1>Welcome to the Fraser Valley Italo-Canadian Society</h1>
@@ -81,7 +81,7 @@ $pagenum = 114;
    </section>
 
    <!-- News Section -->
-   <section>
+   <section class="page-section">
       <h2>News & Updates</h2>
       <div class="home-page-grid">
          <!-- this div uses the most recent news article, with the featured image -->
@@ -137,7 +137,7 @@ $pagenum = 114;
    </section>
 
    <!-- Events Section -->
-   <section>
+   <section class="page-section">
 
       <div class="home-page-grid">
          <div>
@@ -191,7 +191,7 @@ $pagenum = 114;
    </section>
 
    <!-- Contact section -->
-   <section>
+   <section class="page-section">
 
       <div class="home-page-grid">
          <div>
