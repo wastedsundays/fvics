@@ -20,7 +20,7 @@ $pagenum = 114;
 
       <?php
       // this loop shows the posts and event recaps with featured
-         $posttypes = array ('post','tribe_events');
+         $posttypes = array ('post');
          $carouselargs = array(
             'post_type' => $posttypes,
             // 'category_name' => 'featured',
@@ -40,6 +40,47 @@ $pagenum = 114;
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
             <p class="article-thumb-title"><?php the_title(); ?></p>
+            <a href=<?php the_permalink();?>>
+               <button>
+                  
+                  <?php if(get_post_type() === 'tribe_events') {
+                     ?>Register<?php 
+                     }else {
+                        ?>See More<?php
+                     };?>
+               </button>
+            </a>
+         </div>                    
+      </div>
+      <?php
+            }
+            wp_reset_postdata();
+         } 
+      ?>
+
+<?php
+      // this loop shows the upcoming events that have featured
+
+         $eventargs = array(
+            'post_type' => 'tribe_events',
+            // 'category_name' => 'featured',
+            'posts_per_page' => 3
+
+         );
+
+
+         $eventscarousel_query = new WP_Query( $eventargs );
+
+         if ( $eventscarousel_query -> have_posts() ) {
+
+            while ( $eventscarousel_query -> have_posts() ) {
+               $eventscarousel_query -> the_post();
+      ?>
+      <div class="card">
+         <?php the_post_thumbnail( 'full' );?>
+         <div class="card-body">
+            <p class="article-thumb-title"><?php the_title(); ?></p>
+            <p class="article-excerpt"><?php the_excerpt(); ?></p>
             <a href=<?php the_permalink();?>>
                <button>
                   
