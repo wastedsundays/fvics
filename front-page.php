@@ -24,7 +24,7 @@ $pagenum = 114;
          $carouselargs = array(
             'post_type' => $posttypes,
             // 'category_name' => 'featured',
-            'posts_per_page' => 3
+            'posts_per_page' => 4
 
          );
 
@@ -63,8 +63,7 @@ $pagenum = 114;
 
          $eventargs = array(
             'post_type' => 'tribe_events',
-            // 'category_name' => 'featured',
-            'posts_per_page' => 3
+            'posts_per_page' => 3,
 
          );
 
