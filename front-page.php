@@ -19,6 +19,7 @@ $pagenum = 114;
 	<div class="posts-carousel px-5">
 
       <?php
+      // this loop shows the posts and event recaps with featured
          $posttypes = array ('post','tribe_events');
          $carouselargs = array(
             'post_type' => $posttypes,
@@ -39,14 +40,16 @@ $pagenum = 114;
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
             <p class="article-thumb-title"><?php the_title(); ?></p>
-            <button>
-               
-               <?php if(get_post_type() === 'tribe_events') {
-                  ?>Register<?php 
-                  }else {
-                     ?>See More<?php
-                  };?>
-            </button>
+            <a href=<?php the_permalink();?>>
+               <button>
+                  
+                  <?php if(get_post_type() === 'tribe_events') {
+                     ?>Register<?php 
+                     }else {
+                        ?>See More<?php
+                     };?>
+               </button>
+            </a>
          </div>                    
       </div>
       <?php
