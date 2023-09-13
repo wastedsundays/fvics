@@ -24,7 +24,7 @@ $pagenum = 114;
          $carouselargs = array(
             'post_type' => $posttypes,
             // 'category_name' => 'featured',
-            'posts_per_page' => 5
+            'posts_per_page' => 3
 
          );
 
