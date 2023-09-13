@@ -58,7 +58,7 @@ $pagenum = 114;
          } 
       ?>
 
-<?php
+      <?php
       // this loop shows the upcoming events that have featured
 
          $eventargs = array(
@@ -112,14 +112,14 @@ $pagenum = 114;
 
    <!-- 'Welcome' Section -->
    <section class="page-section">
-      <div class="home-page-grid">
-         <div>
+      <div class="home-page-grid home-grid-left">
+         <div class="grid-text">
             <h1>Welcome to the Fraser Valley Italo-Canadian Society</h1>
             <p><?php the_field('welcome_message', $pagenum); ?></p>
             <button>About Us</button>
             <button>Our History</button>
          </div>
-         <div>
+         <div class="grid-image">
          <?php 
             $image = get_field('welcome_image', $pagenum);
             $size = 'full';
@@ -190,8 +190,8 @@ $pagenum = 114;
    <!-- Events Section -->
    <section class="page-section">
       <h2>Events</h2>
-      <div class="home-page-grid">
-         <div>
+      <div class="home-page-grid  home-grid-left">
+         <div class="grid-text">
             <?php
                $home_query = new WP_Query( 'pagename=home' );
                while ( $home_query->have_posts() ) : $home_query->the_post();
@@ -201,7 +201,7 @@ $pagenum = 114;
             ?>
          </div>
          
-         <div>
+         <div class="grid-image">
             <?php
                $args = array(
                   'post_type' => 'tribe_events',
@@ -227,12 +227,12 @@ $pagenum = 114;
       </div>
 
       <!-- Events Recaps -->
-      <div class="home-page-grid">
-         <div>
+      <div class="home-page-grid home-grid-right">
+         <div class="grid-image">
             <!-- this needs to pull the featured image and title from the most recent recap post -->
             <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
          </div>
-         <div>
+         <div class="grid-text">
             <h2>Event Galleries</h2>
             <p><?php the_field('event_galleries_message', $pagenum); ?></p>
             <button>See Event Galleries</button>
@@ -244,13 +244,13 @@ $pagenum = 114;
    <!-- Contact section -->
    <section class="page-section">
       <h2>Say Hello!</h2>
-      <div class="home-page-grid">
-         <div>
+      <div class="home-page-grid home-grid-left">
+         <div class="grid-text">
             <h3>Our Directors</h3>
             <p><?php the_field('directors_section_message', $pagenum); ?></p>
             <button>Meet our directors</button>
          </div>
-         <div>
+         <div class="grid-image">
             <?php 
                $image = get_field('directors_image', $pagenum);
                $size = 'full';
@@ -261,8 +261,8 @@ $pagenum = 114;
          </div>
       </div>
 
-      <div class="home-page-grid">
-         <div>
+      <div class="home-page-grid home-grid-right">
+         <div class="grid-image">
             <?php 
                $image = get_field('contact_image', $pagenum);
                $size = 'full';
@@ -271,7 +271,7 @@ $pagenum = 114;
                }
             ?>
          </div>
-         <div>
+         <div class="grid-text">
             <h3>Contact Us</h3>
             <p><?php the_field('contact_section_message', $pagenum); ?></p>
             <button>Contact Us</button>

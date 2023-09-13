@@ -3,6 +3,20 @@
 
     @media screen and (min-width: 700px) {
         grid-template-columns: 50% 50%;
+        align-items: center;
     }
 
 }
+
+.grid-image img {
+	display: block;
+}
+
+// .home-grid-left, .home-grid-right {
+//     .grid-text {
+//         background-color: lightgray;
+//         border-top: 1px solid $color__fvics-green;
+//         border-bottom: 1px solid $color__fvics-green;
+//         width: 75%;
+//     }
+// }
