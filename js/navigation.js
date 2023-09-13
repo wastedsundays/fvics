@@ -12,6 +12,12 @@
 		return;
 	}
 
+	// closes nav menu if screen resize goes above 1000
+	window.addEventListener('resize', function() {
+		if ( this.window.innerWidth > 1000 ) siteNavigation.classList.remove('toggled');
+		document.body.style.overflow = 'auto';
+		button.setAttribute( 'aria-expanded', 'false' );
+	} );
 	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
 
 	// Return early if the button doesn't exist.

@@ -114,10 +114,10 @@ $pagenum = 114;
    <section class="page-section">
       <div class="home-page-grid home-grid-left">
          <div class="grid-text">
-            <h1>Welcome to the Fraser Valley Italo-Canadian Society</h1>
+            <h1><?php the_field('welcome_title', $pagenum); ?></h1>
             <p><?php the_field('welcome_message', $pagenum); ?></p>
             <a href="about-us" class="link-button">About Us</a>
-            <button>Our History</button>
+            <a href="our-history" class="link-button">Our History</a>
          </div>
          <div class="grid-image">
          <?php 
@@ -235,7 +235,7 @@ $pagenum = 114;
          <div class="grid-text">
             <h2>Event Galleries</h2>
             <p><?php the_field('event_galleries_message', $pagenum); ?></p>
-            <button>See Event Galleries</button>
+            <a href='' class="link-button">See Event Galleries</a>
          </div>
       </div>
 
@@ -248,7 +248,7 @@ $pagenum = 114;
          <div class="grid-text">
             <h3>Our Directors</h3>
             <p><?php the_field('directors_section_message', $pagenum); ?></p>
-            <button>Meet our directors</button>
+            <a href='' class='link-button'>Meet our directors</a>
          </div>
          <div class="grid-image">
             <?php 
@@ -274,7 +274,7 @@ $pagenum = 114;
          <div class="grid-text">
             <h3>Contact Us</h3>
             <p><?php the_field('contact_section_message', $pagenum); ?></p>
-            <button>Contact Us</button>
+            <a href='contact' class='link-button'>Contact Us</a>
          </div>
       </div>
 
