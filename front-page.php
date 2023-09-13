@@ -116,7 +116,7 @@ $pagenum = 114;
          <div class="grid-text">
             <h1>Welcome to the Fraser Valley Italo-Canadian Society</h1>
             <p><?php the_field('welcome_message', $pagenum); ?></p>
-            <button>About Us</button>
+            <a href="about-us" class="link-button">About Us</a>
             <button>Our History</button>
          </div>
          <div class="grid-image">

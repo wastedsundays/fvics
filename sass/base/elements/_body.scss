@@ -1,3 +1,23 @@
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	// background-image: url('fonts/wallpaper.jpg');
+}
+
+#primary {
+	position: relative;
+}
+#primary::before {    
+	content: "";
+	background-image: url('fonts/wallpaper.jpg');
+	// background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.35;
+}
+
+.page-section, article {
+	position: relative;
 }
