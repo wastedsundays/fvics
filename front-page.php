@@ -149,10 +149,10 @@ $pagenum = 114;
                   while ( $news_query -> have_posts() ) {
                      $news_query -> the_post();
             ?>
-         
-            <?php the_post_thumbnail( 'full' );?>
-            <h3 class="article-thumb-title"><?php the_title(); ?></h3>                    
-
+            <a href="<?php the_permalink(); ?>">
+               <?php the_post_thumbnail( 'full' );?>
+               <h3 class="article-thumb-title"><?php the_title(); ?></h3>                    
+            </a>        
             <?php
                   }
                   wp_reset_postdata();
