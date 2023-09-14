@@ -112,9 +112,9 @@ $pagenum = 114;
 
    <!-- 'Welcome' Section -->
    <section class="page-section">
-      <div class="home-page-grid home-grid-left">
+      <div id="welcome-grid" class="home-page-grid home-grid-left">
          <div class="grid-text">
-            <h1><?php the_field('welcome_title', $pagenum); ?></h1>
+            <h1><?php echo esc_html( get_field('welcome_title') ); ?></h1>
             <p><?php the_field('welcome_message', $pagenum); ?></p>
             <a href="about-us" class="link-button">About Us</a>
             <a href="our-history" class="link-button">Our History</a>
@@ -174,10 +174,10 @@ $pagenum = 114;
                   while ( $oldnews_query -> have_posts() ) {
                      $oldnews_query -> the_post();
             ?>
-         
-            <?php the_post_thumbnail( 'full' );?>
-            <h3 class="article-thumb-title">All News</h3>                    
-
+            <a href="news">
+               <?php the_post_thumbnail( 'full' );?>
+               <h3 class="article-thumb-title">All News</h3>                    
+            </a>
             <?php
                   }
                   wp_reset_postdata();
@@ -235,7 +235,7 @@ $pagenum = 114;
          <div class="grid-text">
             <h2>Event Galleries</h2>
             <p><?php the_field('event_galleries_message', $pagenum); ?></p>
-            <a href='' class="link-button">See Event Galleries</a>
+            <a href='galleries' class="link-button">See Event Galleries</a>
          </div>
       </div>
 

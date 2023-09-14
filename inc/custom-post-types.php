@@ -68,7 +68,7 @@ $args = array(
     'show_in_menu'       => true,
     'show_in_rest'       => true,
     'query_var'          => true,
-    'rewrite'            => array( 'slug' => 'galleries' ),
+    'rewrite'            => array('slug' => 'galleries','with_front' => false),
     'capability_type'    => 'post',
     'has_archive'        => true,
     'hierarchical'       => false,

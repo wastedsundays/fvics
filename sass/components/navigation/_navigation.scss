@@ -201,7 +201,11 @@
 }
 }
 
-.menu-item-has-children:hover .sub-menu, .menu-item-has-children:active .sub-menu {
+.menu-item-has-children:hover .sub-menu, 
+.menu-item-has-children:active .sub-menu, 
+.menu-item-has-children:focus .sub-menu, 
+.menu-item-has-children:target .sub-menu,
+.menu-item-has-children:focus-within .sub-menu {
 	@media screen and (min-width: 1000px) {	
 		display: flex!important;
 	}
