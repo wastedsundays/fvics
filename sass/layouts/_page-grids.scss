@@ -12,15 +12,6 @@
 	display: block;
 }
 
-// .home-grid-left, .home-grid-right {
-//     .grid-text {
-//         background-color: lightgray;
-//         border-top: 1px solid $color__fvics-green;
-//         border-bottom: 1px solid $color__fvics-green;
-//         width: 75%;
-//     }
-// }
-
 #welcome-grid {
 
     .grid-text {
@@ -46,6 +37,17 @@
         //     width: 80%;
         //     max-width: 730px;
         // }
+    }
+}
+
+.grid-text {
+    width: 100%;
+    max-width: 500px;
+    margin:  0 auto;
+
+    @media screen and (min-width: 500px) {
+        width: 95%;
+        
     }
 }
 
