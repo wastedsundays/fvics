@@ -94,16 +94,18 @@
     left: 10%;
     /* padding: 0 3rem 2rem; */
     background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: grayscale(.5);
+    backdrop-filter: grayscale(.8) blur(1px);
     max-width: 550px;
-    width: fit-content;
+    width: 80%;
     padding: 0 1rem 2rem;
+    box-shadow: 0px 7px 20px;
    
 }
 
 @media screen and (min-width: 500px) {
     .card-body {
         min-width: 350px;
+        width: 70%;
         padding: 0 2rem 2rem;
     }
 }
