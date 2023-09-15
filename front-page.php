@@ -25,9 +25,7 @@ $pagenum = 114;
             'post_type' => $posttypes,
             // 'category_name' => 'featured',
             'posts_per_page' => 4
-
          );
-
 
          $carousel_query = new WP_Query( $carouselargs );
 
@@ -39,7 +37,7 @@ $pagenum = 114;
       <div class="card">
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
-            <p class="article-thumb-title"><?php the_title(); ?></p>
+            <p class="hero-title"><?php the_title(); ?></p>
             <a href=<?php the_permalink();?>>
                <button>
                   
@@ -67,7 +65,6 @@ $pagenum = 114;
 
          );
 
-
          $eventscarousel_query = new WP_Query( $eventargs );
 
          if ( $eventscarousel_query -> have_posts() ) {
@@ -78,8 +75,8 @@ $pagenum = 114;
       <div class="card">
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
-            <p class="article-thumb-title"><?php the_title(); ?></p>
-            <p class="article-excerpt"><?php the_excerpt(); ?></p>
+            <p class="hero-title"><?php the_title(); ?></p>
+            <p class="hero-excerpt"><?php echo get_the_excerpt(); ?></p>
             <a href=<?php the_permalink();?>>
                <button>
                   
@@ -102,8 +99,8 @@ $pagenum = 114;
       <div class="card">
       <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
          <div class="card-body">
-            <p class="article-thumb-title">Join Us</p>
-            <p>Become a Member Today</p>
+            <p class="hero-title">Join Us</p>
+            <p class="hero-excerpt">Become a Member Today</p>
             <button>Join Us</button>
          </div>
       </div>
@@ -112,9 +109,10 @@ $pagenum = 114;
 
    <!-- 'Welcome' Section -->
    <section class="page-section">
+      <h1 class="home-section-title">Welcome to the Fraser Valley Italo-Canadian Society</h1>
       <div id="welcome-grid" class="home-page-grid home-grid-left">
          <div class="grid-text">
-            <h1><?php echo esc_html( get_field('welcome_title') ); ?></h1>
+            <h3><?php echo esc_html( get_field('welcome_title') ); ?></h3>
             <p><?php the_field('welcome_message', $pagenum); ?></p>
             <a href="about-us" class="link-button">About Us</a>
             <a href="our-history" class="link-button">Our History</a>
@@ -133,7 +131,7 @@ $pagenum = 114;
 
    <!-- News Section -->
    <section class="page-section">
-      <h2>News & Updates</h2>
+      <h2 class="home-section-title">News & Updates</h2>
       <div class="home-page-grid">
          <!-- this div uses the most recent news article, with the featured image -->
          <div>
@@ -189,9 +187,9 @@ $pagenum = 114;
 
    <!-- Events Section -->
    <section class="page-section">
-      <h2>Events</h2>
+      <h2 class="home-section-title">Events</h2>
       <div class="home-page-grid  home-grid-left">
-         <div class="grid-text">
+         <div class="grid-text grid-reverse">
             <?php
                $home_query = new WP_Query( 'pagename=home' );
                while ( $home_query->have_posts() ) : $home_query->the_post();
@@ -233,7 +231,7 @@ $pagenum = 114;
             <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
          </div>
          <div class="grid-text">
-            <h2>Event Galleries</h2>
+            <h3>Event Galleries</h3>
             <p><?php the_field('event_galleries_message', $pagenum); ?></p>
             <a href='galleries' class="link-button">See Event Galleries</a>
          </div>
@@ -243,9 +241,9 @@ $pagenum = 114;
 
    <!-- Contact section -->
    <section class="page-section">
-      <h2>Say Hello!</h2>
+      <h2 class="home-section-title">Say Hello!</h2>
       <div class="home-page-grid home-grid-left">
-         <div class="grid-text">
+         <div class="grid-text grid-reverse">
             <h3>Our Directors</h3>
             <p><?php the_field('directors_section_message', $pagenum); ?></p>
             <a href='' class='link-button'>Meet our directors</a>

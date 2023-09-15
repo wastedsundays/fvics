@@ -179,7 +179,7 @@
 .menu-item-has-children > a{
 	display: none;
 
-	@media screen and (min-width: 50em) {
+	@media screen and (min-width: 1000px) {
 		display: block;
 	}
 }
