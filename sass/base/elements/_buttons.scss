@@ -38,6 +38,36 @@ input[type="submit"] {
 
 }
 
+.hero-link-button {
+	letter-spacing: 1px;
+	border: 1px solid;
+	border-color: $color__fvics-red;
+	background: $color__fvics-red;
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	line-height: 1;
+	padding: .6em 1em;
+	width: 100%;
+	max-width: 230px;
+	text-align: center;
+	display: block;
+
+	&:hover {
+		border-color: $color__italia-red;
+		background: $color__italia-red;
+
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__italia-green;
+	}
+
+	&:hover, &:active, &:focus, &:visited {
+		color: rgba(255, 255, 255, 0.9);
+	}
+}
+
 
 
 

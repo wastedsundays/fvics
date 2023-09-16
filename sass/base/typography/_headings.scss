@@ -11,16 +11,33 @@ h6 {
 }
 
 h1 {
-	// font-size: 2rem;
 	font-size: 1.75rem;
+
+	@media screen and (min-width: 1100px) {
+		font-size: 3rem;
+		
+	}
+}
+
+.hero-title {
+	font-size: 1.75rem;
+
+	@media screen and (min-width: 1100px) {
+		font-size:2.5rem
+	}
 }
 
 h2 {
 	// font-size: 1.75rem;
 	font-size: 1.5rem;
+
+		@media screen and (min-width: 1100px) {
+		font-size: 2.5rem;
+		
+	}
 }
 
-h3 {
+h3, .hero-link-button, .hero-excerpt {
 	// font-size: 1.5rem;
 	font-size: 1.25rem;
 }

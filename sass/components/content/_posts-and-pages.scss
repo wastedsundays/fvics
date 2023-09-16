@@ -33,16 +33,31 @@
 }
 
 .article-thumb-title {
-	// font-size: 2em;
-	// color: white;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	color: $color__text-main;
+	padding: 0 0.5rem;
+
+	@media screen and (min-width: 550px) { 
+		padding: 0.5rem;
+		
+	}
 }
 
 .hero-title {
-	font-size: 2em;
-	color: red;
+	color: $color__text-main;
+	// inline-size: 100%;
+    overflow-wrap: break-word;
 }
 
 .hero-excerpt {
-	font-size: 1.25rem;
-	color: yellow;
+	color: $color__text-main;
+	font-family: $font__italic;
+}
+
+.news-link {
+
+	position: relative;
 }

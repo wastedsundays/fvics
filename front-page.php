@@ -38,15 +38,12 @@ $pagenum = 114;
          <?php the_post_thumbnail( 'full' );?>
          <div class="card-body">
             <p class="hero-title"><?php the_title(); ?></p>
-            <a href=<?php the_permalink();?>>
-               <button>
-                  
-                  <?php if(get_post_type() === 'tribe_events') {
-                     ?>Register<?php 
-                     }else {
-                        ?>See More<?php
-                     };?>
-               </button>
+            <a href="<?php the_permalink();?>" class="hero-link-button">
+               <?php if(get_post_type() === 'tribe_events') {
+                  ?>Register<?php 
+                  }else {
+                     ?>See More<?php
+                  };?>
             </a>
          </div>                    
       </div>
@@ -77,15 +74,12 @@ $pagenum = 114;
          <div class="card-body">
             <p class="hero-title"><?php the_title(); ?></p>
             <p class="hero-excerpt"><?php echo get_the_excerpt(); ?></p>
-            <a href=<?php the_permalink();?>>
-               <button>
-                  
-                  <?php if(get_post_type() === 'tribe_events') {
-                     ?>Register<?php 
-                     }else {
-                        ?>See More<?php
-                     };?>
-               </button>
+            <a href="<?php the_permalink();?>" class="hero-link-button">
+               <?php if(get_post_type() === 'tribe_events') {
+                  ?>Register<?php 
+                  }else {
+                     ?>See More<?php
+                  };?>
             </a>
          </div>                    
       </div>
@@ -101,7 +95,13 @@ $pagenum = 114;
          <div class="card-body">
             <p class="hero-title">Join Us</p>
             <p class="hero-excerpt">Become a Member Today</p>
-            <button>Join Us</button>
+            <a href="join" class="hero-link-button">
+               <?php if(get_post_type() === 'tribe_events') {
+                  ?>Register<?php 
+                  }else {
+                     ?>See More<?php
+                  };?>
+            </a>
          </div>
       </div>
 
@@ -111,7 +111,7 @@ $pagenum = 114;
    <section class="page-section">
       <h1 class="home-section-title">Welcome to the Fraser Valley Italo-Canadian Society</h1>
       <div id="welcome-grid" class="home-page-grid home-grid-left">
-         <div class="grid-text">
+         <div class="grid-text top-grid-text">
             <h3><?php echo esc_html( get_field('welcome_title') ); ?></h3>
             <p><?php the_field('welcome_message', $pagenum); ?></p>
             <a href="about-us" class="link-button">About Us</a>
@@ -132,9 +132,9 @@ $pagenum = 114;
    <!-- News Section -->
    <section class="page-section">
       <h2 class="home-section-title">News & Updates</h2>
-      <div class="home-page-grid">
+      <div class="home-page-grid news-grid">
          <!-- this div uses the most recent news article, with the featured image -->
-         <div>
+         <div class="news-link">
             <?php
                $newsargs = array(
                   'post_type' => 'post',
@@ -158,7 +158,7 @@ $pagenum = 114;
             ?>
          </div>
          <!-- this div is going to show the title and featured image of either the second most recent update, or a specific photo. tbd -->
-         <div>
+         <div class="news-link">
             <?php
                $oldnewsargs = array(
                   'post_type' => 'post',
@@ -186,10 +186,10 @@ $pagenum = 114;
    </section>
 
    <!-- Events Section -->
-   <section class="page-section">
+   <section class="page-section double-section">
       <h2 class="home-section-title">Events</h2>
       <div class="home-page-grid  home-grid-left">
-         <div class="grid-text grid-reverse">
+         <div class="grid-text other-grid-text grid-reverse">
             <?php
                $home_query = new WP_Query( 'pagename=home' );
                while ( $home_query->have_posts() ) : $home_query->the_post();
@@ -199,7 +199,7 @@ $pagenum = 114;
             ?>
          </div>
          
-         <div class="grid-image">
+         <div class="grid-image news-link">
             <?php
                $args = array(
                   'post_type' => 'tribe_events',
@@ -230,7 +230,7 @@ $pagenum = 114;
             <!-- this needs to pull the featured image and title from the most recent recap post -->
             <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
          </div>
-         <div class="grid-text">
+         <div class="grid-text other-grid-text">
             <h3>Event Galleries</h3>
             <p><?php the_field('event_galleries_message', $pagenum); ?></p>
             <a href='galleries' class="link-button">See Event Galleries</a>
@@ -240,10 +240,10 @@ $pagenum = 114;
    </section>
 
    <!-- Contact section -->
-   <section class="page-section">
+   <section class="page-section double-section">
       <h2 class="home-section-title">Say Hello!</h2>
       <div class="home-page-grid home-grid-left">
-         <div class="grid-text grid-reverse">
+         <div class="grid-text other-grid-text grid-reverse">
             <h3>Our Directors</h3>
             <p><?php the_field('directors_section_message', $pagenum); ?></p>
             <a href='' class='link-button'>Meet our directors</a>
@@ -269,7 +269,7 @@ $pagenum = 114;
                }
             ?>
          </div>
-         <div class="grid-text">
+         <div class="grid-text other-grid-text">
             <h3>Contact Us</h3>
             <p><?php the_field('contact_section_message', $pagenum); ?></p>
             <a href='contact' class='link-button'>Contact Us</a>

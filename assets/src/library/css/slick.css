@@ -93,7 +93,7 @@
     top: 35%;
     left: 10%;
     /* padding: 0 3rem 2rem; */
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: grayscale(.8) blur(1px);
     max-width: 550px;
     width: 80%;
