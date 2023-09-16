@@ -1,12 +1,45 @@
 footer {
     background-color: $color__fvics-green;
+    padding: 2rem 2rem 1rem;
     color: white;
+    display: grid;
+    grid-template-areas: "socials"
+                        "email"
+                        "links"
+                        "text";
+
+    @media screen and (min-width: 650px) {
+        grid-template-areas: "socials socials"
+                             "links email"
+                             "links text";
+
+        grid-template-columns: 40% 60%;
+    }
+
+    @media screen and (min-width: 11px) {
+        padding-bottom: 0rem;
+    }
+
+    
 
     .footer-socials {
+        grid-area: socials;
         display: flex;
         justify-content: space-evenly;
         width: 260px;
         margin: auto;
+    }
+
+    .newsletter-signup {
+        grid-area: email;        
+    }
+
+    .footer-nav {
+        grid-area: links;
+    }
+
+    .footer-text {
+        grid-area: text;
     }
 
     svg {

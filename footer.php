@@ -25,6 +25,7 @@
 		</div>
 				
 		<div class="newletter-signup">
+		<p>Stay in touch - sign up for our email newsletter</p>
 		<input type="text" id="lname" name="lname" placeholder="email">
 		<button>submit</button>
 		</div>
