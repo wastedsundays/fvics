@@ -1,0 +1,17 @@
+footer {
+    background-color: $color__fvics-green;
+    color: white;
+
+    .footer-socials {
+        display: flex;
+        justify-content: space-evenly;
+        width: 260px;
+        margin: auto;
+    }
+
+    svg {
+        fill: white;
+        height: 48px;
+        width: 48px;
+    }
+}
