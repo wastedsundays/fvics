@@ -200,3 +200,38 @@ function slick_register_scripts() {
 wp_enqueue_script( 'carousel-js', untrailingslashit( get_template_directory_uri() ) . '/assets/src/carousel/index.js', ['jquery'], filemtime( untrailingslashit( get_template_directory() ) . '/assets/src/carousel/index.js' ), true );
 wp_enqueue_script( 'carousel-min', untrailingslashit( get_template_directory_uri() ). '/assets/src/library/js/slick.min.js', ['jquery'], filemtime( untrailingslashit( get_template_directory() ) . '/assets/src/library/js/slick.min.js '), true );
 }
+
+/** custom colors */
+
+add_theme_support( 'editor-color-palette', array(
+    array(
+        'name'  => esc_attr__( 'Fraser Valley Red', 'themeLangDomain' ),
+        'slug'  => 'fv-red',
+        'color' => '#AF2026',
+    ),
+    array(
+        'name'  => esc_attr__( 'Italia Red', 'themeLangDomain' ),
+        'slug'  => 'italia-red',
+        'color' => '#E30521',
+    ),
+	array(
+        'name'  => esc_attr__( 'Fraser Valley Green', 'themeLangDomain' ),
+        'slug'  => 'fv-green',
+        'color' => '#226432',
+    ),
+	array(
+        'name'  => esc_attr__( 'Italia Green', 'themeLangDomain' ),
+        'slug'  => 'italia-green',
+        'color' => '#009C3D',
+    ),
+    array(
+        'name'  => esc_attr__( 'very light gray', 'themeLangDomain' ),
+        'slug'  => 'very-light-gray',
+        'color' => '#eee',
+    ),
+    array(
+        'name'  => esc_attr__( 'very dark gray', 'themeLangDomain' ),
+        'slug'  => 'very-dark-gray',
+        'color' => '#444',
+    ),
+) );

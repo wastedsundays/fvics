@@ -20,6 +20,20 @@
 	margin: 1.5em 0 0;
 }
 
+.static-page-layout {
+	.entry-content {
+		width: 95%;
+		max-width: 900px;
+		margin: 0 auto 8rem;
+		font-size: 1.25rem;
+		box-shadow: 0 0 10px;
+		background-color: white;
+		padding: 3rem;
+	}
+
+
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -47,6 +61,23 @@
 		padding: 0.5rem;
 		
 	}
+}
+
+.hero-section {
+	height: 100vh;
+	position: relative;
+
+	.post-thumbnail {
+		height: 100%;
+		box-shadow: 0 0 20px;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+
 }
 
 .hero-title {
