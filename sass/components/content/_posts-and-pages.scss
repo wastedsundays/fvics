@@ -28,7 +28,17 @@
 		font-size: 1.25rem;
 		box-shadow: 0 0 10px;
 		background-color: white;
-		padding: 3rem;
+		padding: 3rem 1.5rem;
+
+		@media screen and (min-width: 600px) {
+			padding: 4rem 2rem;
+			
+		}
+
+		@media screen and (min-width: 900px) {
+			padding: 4rem 3rem;
+			
+		}
 	}
 
 
@@ -81,6 +91,7 @@
 }
 
 .hero-title {
+	font-family: $font__heading;
 	color: $color__text-main;
 	// inline-size: 100%;
     overflow-wrap: break-word;
