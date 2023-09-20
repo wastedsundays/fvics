@@ -142,6 +142,16 @@ add_action( 'widgets_init', 'fvics_adamh_widgets_init' );
  * Enqueue scripts and styles.
  */
 function fvics_adamh_scripts() {
+
+	//load google fonts
+	wp_enqueue_style( 
+		'fwd-googlefonts', 
+		'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet',
+		array(),
+		null, // Set null if loading multiple Google Fonts from their CDN
+		'all',
+	);
+
 	wp_enqueue_style( 'fvics_adamh-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'fvics_adamh-style', 'rtl', 'replace' );
 
