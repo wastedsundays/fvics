@@ -25,7 +25,7 @@
 		</a>	
 		</div>
 				
-		<div class="newletter-signup">
+		<div class="newsletter-signup">
 		<p>Stay in touch - sign up for our email newsletter</p>
 		<?php echo do_shortcode('[wpforms id="242" title="false"]'); ?>
 		</div>
@@ -42,6 +42,9 @@
 		<div class="footer-text">
 			<p><?php the_field('footer_text', 114); ?></p>
 		</div>
+		<div class="footer-copyright">
+			<?php $year = date("Y"); ?>
+			<p>&copy; <?php echo $year;?> Fraser Valley Italo-Canadian Society.</p>
 			
 
 	</footer><!-- #colophon -->

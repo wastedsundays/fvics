@@ -68,6 +68,20 @@ input[type="submit"] {
 	}
 }
 
+// wp forms button override
+.wpforms-form button[type=submit], button.wpforms-page-button {
+    background-color: $color__fvics-red !important;
+    border-color: $color__fvics-red !important;
+    color: #fff !important;
+    // transition: background 0.3s ease-in-out;
+	border-radius: 0 !important;
+	font-family: $font__main !important;
+	width: 100%;
+}
+.wpforms-form button[type=submit]:hover, button.wpforms-page-button:hover {
+	background: $color__italia-red !important;
+}
+
 
 
 

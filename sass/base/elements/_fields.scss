@@ -31,3 +31,33 @@ select {
 textarea {
 	width: 100%;
 }
+
+
+.newsletter-signup {
+	p {
+		margin-bottom: 0 !important;
+	}
+}
+.wpforms-container {
+
+	.wpforms-submit-container {
+		margin-top: .5rem !important;
+		padding-top: 0 !important;
+	}
+
+	.wpforms-field {
+		padding: 0.5rem 0 !important;
+	}
+
+	.wpforms-field-row.wpforms-field-medium {
+		max-width: 100% !important;
+	}
+
+	input.wpforms-field-medium {
+		max-width: 100% !important;
+	}
+}
+
+div.wpforms-container-full {
+	margin: 0 auto !important;
+}
