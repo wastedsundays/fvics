@@ -77,9 +77,15 @@ input[type="submit"] {
 	border-radius: 0 !important;
 	font-family: $font__main !important;
 	width: 100%;
+	text-transform: uppercase;
 }
 .wpforms-form button[type=submit]:hover, button.wpforms-page-button:hover {
 	background: $color__italia-red !important;
+}
+
+
+.tribe-events-c-subscribe-dropdown__button-text {
+	text-transform: uppercase;
 }
 
 
