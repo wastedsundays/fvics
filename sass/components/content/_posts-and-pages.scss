@@ -106,3 +106,18 @@
 
 	position: relative;
 }
+
+
+
+.director-card {
+		/* padding: 0 3rem 2rem; */
+		background-color: rgba(255, 255, 255, 0.8);
+		backdrop-filter: grayscale(.8) blur(1px);
+		max-width: 550px;
+		width: 95%;
+		margin: 2rem auto;
+		padding: 0 1rem 2rem;
+		box-shadow: 0px 7px 20px;
+}
+
+

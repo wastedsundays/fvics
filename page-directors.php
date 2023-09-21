@@ -23,9 +23,6 @@ get_header();
 
 
 
-
-
-
 			get_template_part( 'template-parts/content', 'page-static' );
 
 
@@ -42,7 +39,24 @@ get_header();
 								$sub_bio = get_sub_field('director_bio');
 								$sub_image = get_sub_field('director_image');
 								// Do something...
-								echo "<div class='card-body'>".$sub_name ."-". $sub_position ."-". $sub_email ."-". $sub_bio ."-". $sub_image."</div>";
+								?>
+								<div class="director-card">
+									<div class="director-image">
+										<?php
+											if( $sub_image ) {
+												echo wp_get_attachment_image( $sub_image, "bio-pic" );
+											}
+										?>
+									</div>
+									<div class="director-info">
+										<h3><?php echo $sub_name; ?></h3>
+										<h4><?php echo $sub_position; ?></h4>
+										<p><?php echo $sub_bio; ?></p>
+										<div><?php echo $sub_email; ?></div>
+									</div>
+								</div>
+								<?php
+
 			
 							// End loop.
 							endwhile;

@@ -50,6 +50,8 @@ function fvics_adamh_setup() {
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'align-full' );
 
+	add_image_size( 'bio-pic', 400, 400, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
