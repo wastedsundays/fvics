@@ -7,7 +7,7 @@ body {
 	position: relative;
 	padding-bottom: 1rem;
 }
-#primary::before, #page::before {    
+#primary::before {    
 	content: "";
 	background-image: url('fonts/wallpaper.jpg');
 	// background-size: cover;
@@ -22,3 +22,5 @@ body {
 .page-section, article {
 	position: relative;
 }
+
+

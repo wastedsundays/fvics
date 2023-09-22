@@ -114,24 +114,24 @@ $cost  = tribe_get_formatted_cost( $event_id );
 			<div class="tribe-events-single-event-description tribe-events-content">
 				<?php the_content(); ?>
 			</div>
-			<!-- Showing sponsors on bottom of event page -->
+			<!-- Showing sponsors section on event page -->
 				<?php $sponsors = get_field('event_sponsors'); ?>
-				<?php if ( !empty( $sponsors ) ): ?> <p>Thank You to Our Sponsors</p> 
+				<?php if ( !empty( $sponsors ) ): ?> <p class="sponsor-thanks">Thank You to Our Sponsors</p> 
 					<div class="sponsor-section">
 						<?php foreach($sponsors as $sponsor):?>
-							<div>
+							<div class="sponsor">
 								<?php $photo = get_field('sponsor_logo', $sponsor->ID);?>
 								<?php $url = get_field('sponsor_website', $sponsor->ID);?>
 								<a href=<?php echo esc_url($url); ?> target="_blank" rel="noopener noreferrer">
 									<img src=<?php echo esc_url($photo['url']); ?> alt="<?php ($photo['alt']) ?>Logo" class="sponsor-logo"/>
+									<p><?php echo get_the_title( $sponsor->ID); ?></p>
 								</a>
-								<?php echo get_the_title( $sponsor->ID); ?>
 							</div>
 
 						<?php endforeach;?>
 					</div>
 				<?php endif ?>
-	<!-- End of Sponsor Section -->
+			<!-- End of Sponsor Section -->
 			<!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
 
