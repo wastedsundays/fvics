@@ -44,9 +44,10 @@
 .tribe-events-single-event-description {
     padding: 0 5%;
     max-width: 850px;
-    margin: 0 auto;
+    margin: 1rem auto 2rem;
     @media screen and (min-width: 1000px) {
         padding: 0;
+        margin: 2rem auto 3rem;
     }
 }
 
@@ -76,6 +77,17 @@
 .sponsor {
     width: 170px;
     text-align: center;
+
+    a {
+        text-decoration: none;
+        font-family: $font__heading;
+        font-size: 1rem;
+        color: black;
+
+        &:hover, &:active, &:focus, &:target {
+            color: $color__fvics-red
+        }
+    }
 }
 
 .single-tribe_events .tribe-events-c-subscribe-dropdown__container, .tribe-events .tribe-events-c-subscribe-dropdown__container {
@@ -92,6 +104,17 @@
 .tribe-tickets__rsvp-wrapper {
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+.document-download-section {
+    border-top: none !important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.document-description {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 

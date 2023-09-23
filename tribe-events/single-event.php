@@ -115,6 +115,7 @@ $cost  = tribe_get_formatted_cost( $event_id );
 				<?php the_content(); ?>
 			</div>
 			<!-- Showing sponsors section on event page -->
+			<div class="sponsor-wrapper">
 				<?php $sponsors = get_field('event_sponsors'); ?>
 				<?php if ( !empty( $sponsors ) ): ?> <p class="sponsor-thanks">Thank You to Our Sponsors</p> 
 					<div class="sponsor-section">
@@ -131,7 +132,8 @@ $cost  = tribe_get_formatted_cost( $event_id );
 						<?php endforeach;?>
 					</div>
 				<?php endif ?>
-			<!-- End of Sponsor Section -->
+			</div> 
+			<!-- End of Sponsor Wrapper -->
 			<!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
 
@@ -139,20 +141,23 @@ $cost  = tribe_get_formatted_cost( $event_id );
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 			<?php tribe_get_template_part( 'modules/meta' ); ?>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+			<!-- Showing the Document download section -->
+			<?php $file = get_field('event_document');
+			  $description = get_field('document_description');
+				if( $file ): ?>
+					<div class="document-download-section">
+						<p class="document-description"><?php echo $description; ?></p>
+						<a class="download-button" href="<?php echo $file['url']; ?>">Download Form</a>
+					</div>
+				<?php endif; ?>
+			<!-- end of document download section -->
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
 
 
 
-	<!-- Showing the Document download section -->
-		<?php $file = get_field('event_document');
-			  $description = get_field('document_description');
-			if( $file ): ?>
-				<p><?php echo $description; ?></p>
-    			<a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
-		<?php endif; ?>
-	<!-- end of document download section -->
+
 
 	<!-- Event footer -->
 	<div id="tribe-events-footer">
