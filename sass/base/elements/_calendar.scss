@@ -108,9 +108,11 @@
 
 .document-download-section {
     border-top: none !important;
-    width: 100%;
+    width: 95% !important;
     margin: 0 auto;
 }
+
+
 
 .document-description {
     max-width: 900px;
@@ -118,3 +120,16 @@
 }
 
 
+.tribe-events-event-meta {
+    width: 95% !important;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tribe-events-venue-map {
+    width: 100%;
+
+    iframe {
+        max-height: 300px;
+    }
+}
