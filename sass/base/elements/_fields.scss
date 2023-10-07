@@ -40,6 +40,14 @@ textarea {
 }
 .wpforms-container {
 
+	input, textarea, select {
+
+		&:active, &:focus, &:focus-within, &:target, &:focus-visible {
+			border: 1px solid $color__fvics-red !important;
+			box-shadow: none !important;
+		}
+	}
+
 	.wpforms-submit-container {
 		margin-top: .5rem !important;
 		padding-top: 0 !important;
@@ -60,4 +68,9 @@ textarea {
 
 div.wpforms-container-full {
 	margin: 0 auto !important;
+}
+
+.wpforms-container select.wpforms-field-medium {
+	max-width: 100% !important;
+
 }
