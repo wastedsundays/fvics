@@ -121,3 +121,29 @@
 }
 
 
+// contact page
+
+.page-id-13 {
+
+	.entry-title {
+		width: 90%;
+		margin: 0 auto;
+		max-width: 1400px;
+	}
+
+	article {
+
+		padding: 7rem 0 4rem;
+		@media screen and (min-width: 33.75rem) {
+			padding-top: 9rem;
+		}
+		
+	}
+	.wp-block-columns {
+		width: 90%;
+		margin: 0 auto;
+		max-width: 1400px;
+
+	}
+}
+
