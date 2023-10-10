@@ -28,7 +28,7 @@ get_header();
 
 						// Check rows existexists.
 						if( have_rows('director_entry') ):
-
+							?><div><?php
 							// Loop through rows.
 							while( have_rows('director_entry') ) : the_row();
 			
@@ -40,26 +40,27 @@ get_header();
 								$sub_image = get_sub_field('director_image');
 								// Do something...
 								?>
-								<div class="director-card">
-									<div class="director-image">
-										<?php
-											if( $sub_image ) {
-												echo wp_get_attachment_image( $sub_image, "bio-pic" );
-											}
-										?>
+									<div class="director-card">
+										<div class="director-image">
+											<?php
+												if( $sub_image ) {
+													echo wp_get_attachment_image( $sub_image, "bio-pic" );
+												}
+											?>
+										</div>
+										<div class="director-info">
+											<h3><?php echo $sub_name; ?></h3>
+											<h4><?php echo $sub_position; ?></h4>
+											<p><?php echo $sub_bio; ?></p>
+											<div><?php echo $sub_email; ?></div>
+										</div>
 									</div>
-									<div class="director-info">
-										<h3><?php echo $sub_name; ?></h3>
-										<h4><?php echo $sub_position; ?></h4>
-										<p><?php echo $sub_bio; ?></p>
-										<div><?php echo $sub_email; ?></div>
-									</div>
-								</div>
 								<?php
 
 			
 							// End loop.
 							endwhile;
+							?></div><?php
 			
 						// No value.
 						else :

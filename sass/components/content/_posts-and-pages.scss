@@ -157,3 +157,43 @@
 	}
 }
 
+.news-page-content {
+	
+	.wp-block-query {
+
+		// li:nth-child(odd) {
+			// background-color: yellow;
+		// }
+
+		li:nth-child(even) {
+			// background-color: red;
+			@media screen and (min-width: 1800px) {
+				.news-box-image {
+					order: 1;
+				}
+	
+				.news-box-text {
+					width: 70%;
+					margin: 0 0 0 auto;
+				}
+			}
+
+		}
+
+		.kt-row-column-wrap {
+			align-items: center;
+
+			// div:nth-child(1) {
+			// 	order: 1;
+			// }
+
+		}
+
+		.news-box {
+			color: black;
+		}
+
+
+	}
+}
+
