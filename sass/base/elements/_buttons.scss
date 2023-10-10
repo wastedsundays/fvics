@@ -1,4 +1,4 @@
-button, .link-button,
+button, .link-button, .wp-block-post-excerpt__more-link,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -23,7 +23,7 @@ input[type="submit"] {
 	}
 }
 
-.link-button {
+.link-button, .wp-block-post-excerpt__more-link {
 	width: 100%;
 	display: block;
 	text-align: center;
