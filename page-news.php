@@ -14,13 +14,15 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main news-page">
 
 			<?php
 			while ( have_posts() ) :
 				?>
-				<div class="hero-section">
-					<?php fvics_adamh_post_thumbnail(); ?>
+				<div class="hero-section news-hero-section">
+					<?php 
+						fvics_adamh_post_thumbnail(); 
+					?>
 
 					<div class="card-body">
 						<?php the_title( '<h1 class="hero-title">', '</h1>' ); ?>
@@ -31,11 +33,6 @@ get_header();
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-
-
-			
-				<?php /*fvics_adamh_post_thumbnail();*/ ?>
-			
 				<div class="entry-content news-page-content">
 					<?php
 					the_content();

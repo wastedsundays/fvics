@@ -6,7 +6,7 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	// border-radius: 3px;
 	background: $color__background-button;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 1);
 	text-decoration: none;
 	line-height: 1;
 	padding: 0.6em 1em;
@@ -41,7 +41,7 @@ input[type="submit"] {
 .download-button {
 	border-color: $color__fvics-red;
 	background: $color__fvics-red;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 1);
 	text-decoration: none;
 	line-height: 1;
 	padding: .6em 1em;

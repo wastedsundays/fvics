@@ -8,7 +8,7 @@
  */
 
 ?>
-<?php fvics_adamh_post_thumbnail(); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -18,7 +18,7 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post'|'fvics-galleries' === get_post_type() ) :
+		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
@@ -29,7 +29,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-
+	<?php fvics_adamh_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
