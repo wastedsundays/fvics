@@ -158,11 +158,28 @@
 }
 
 .news-page-content {
+
+	.wp-block-query-pagination {
+		justify-content: center;
+	}
+
+	width: 95%;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	.wp-block-post-title {
+		font-size: 1.25rem;
+
+		@media screen and (min-width: 900px) {
+			font-size: 1.5rem;
+			
+		}
+	}
 	
 	.wp-block-query {
 
 		li:nth-child(odd) {
-			@media screen and (min-width: 800px) {
+			@media screen and (min-width: 768px) {
 
 				.news-box-text {
 					margin: 0 auto 0 0;
@@ -174,7 +191,7 @@
 
 		li:nth-child(even) {
 			// background-color: red;
-			@media screen and (min-width: 800px) {
+			@media screen and (min-width: 768px) {
 				.news-box-image {
 					order: 1;
 				}
