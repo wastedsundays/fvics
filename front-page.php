@@ -228,7 +228,22 @@ $pagenum = 114;
       <div class="home-page-grid home-grid-right">
          <div class="grid-image">
             <!-- this needs to pull the featured image and title from the most recent recap post -->
-            <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
+            <?php
+               $argsImg = array(
+                  'post_type' => 'fvics-galleries',
+                  'posts_per_page' => 1,
+               );
+               $gallery_query = new WP_Query( $argsImg );
+
+               if ( $gallery_query -> have_posts() ) {
+
+                  while ( $gallery_query -> have_posts() ) {
+                     $gallery_query -> the_post();
+                     the_post_thumbnail( 'full' );
+                  }
+                  wp_reset_postdata();
+               } 
+            ?>
          </div>
          <div class="grid-text other-grid-text">
             <h3>Event Galleries</h3>
