@@ -197,6 +197,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/custom-post-types.php';
 
+
 /**
  * Enqueue slick carousel
  */
@@ -247,3 +248,10 @@ add_theme_support( 'editor-color-palette', array(
         'color' => '#444',
     ),
 ) );
+
+
+add_filter('widget_posts_args', 'add_custom_post_type_to_recent_posts'); 
+function add_custom_post_type_to_recent_posts($params) {
+   $params['post_type'] = array('fvics-galleries');
+   return $params;
+}
