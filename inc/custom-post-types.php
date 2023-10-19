@@ -44,7 +44,7 @@ function ah_register_custom_post_types() {
 
 //Register Event Gallery/recap custom post type
 $labels = array(
-    'name'               => _x( 'Gallery', 'post type general name'  ),
+    'name'               => _x( 'Event Galleries', 'post type general name'  ),
     'singular_name'      => _x( 'Gallery', 'post type singular name'  ),
     'menu_name'          => _x( 'Galleries', 'admin menu'  ),
     'name_admin_bar'     => _x( 'Gallery', 'add new on admin bar' ),

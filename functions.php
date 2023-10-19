@@ -250,8 +250,9 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 
-add_filter('widget_posts_args', 'add_custom_post_type_to_recent_posts'); 
-function add_custom_post_type_to_recent_posts($params) {
-   $params['post_type'] = array('fvics-galleries');
-   return $params;
+add_filter( 'widget_posts_args', 'wpse241060_widget_recent_post_4_cpt' );
+function wpse241060_widget_recent_post_4_cpt( $params )
+{
+    $params['post_type'] = array( 'post', 'fvics-galleries');
+    return $params;
 }
