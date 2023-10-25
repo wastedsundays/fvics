@@ -24,10 +24,14 @@ get_header();
 					?>
 
 					<div class="card-body">
-						<?php post_type_archive_title( '<h1 class="hero-title">', '</h1>' ); ?>
+						<?php if ( is_post_type_archive() ) {
+							post_type_archive_title( '<h1 class="hero-title">', '</h1>' );
+						} else {
+						the_archive_title( '<h1 class="hero-title">News Archive ', '</h1>' );
+						}?>
 					</div>
 				</div>
-
+				<div class="archive-page-content">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -37,9 +41,15 @@ get_header();
 				the_post();
 
 				?>
-				<ul>
-					<li><a href="<?php the_permalink();?>"><?php fvics_adamh_post_thumbnail(); the_title(); the_excerpt();?></a></li>
-				</ul>
+				<div class="archive-single-grid">
+					<?php fvics_adamh_post_thumbnail();
+					// the_permalink();
+					?>
+					<div class="archive-box-text">
+						<h3><?php the_title();?></h3>
+						<p><?php the_excerpt();?></p>
+					</div>
+				</div>
 				<?php
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -49,7 +59,9 @@ get_header();
 				// get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
+			?>
+			</div>
+			<?php
 			the_posts_navigation();
 
 		else :
