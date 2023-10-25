@@ -48,6 +48,7 @@ get_header();
 					<div class="archive-box-text">
 						<h3><?php the_title();?></h3>
 						<p><?php the_excerpt();?></p>
+						<a href="<?php the_permalink();?>" class="link-button">Read More</a>
 					</div>
 				</div>
 				<?php
@@ -74,5 +75,7 @@ get_header();
 	</main><!-- #main -->
 
 <?php
+if ( !is_post_type_archive() ) {
 get_sidebar();
+}
 get_footer();
