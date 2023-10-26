@@ -20,14 +20,14 @@ get_header();
 
 			<div class="hero-section news-hero-section">
 					<?php 
-						// fvics_adamh_post_thumbnail(); 
+						fvics_adamh_post_thumbnail(); 
 					?>
 
 					<div class="card-body">
 						<?php if ( is_post_type_archive() ) {
 							post_type_archive_title( '<h1 class="hero-title">', '</h1>' );
 						} else {
-						the_archive_title( '<h1 class="hero-title">News Archive ', '</h1>' );
+						the_archive_title( '<h1 class="hero-title">News Archive: ', '</h1>' );
 						}?>
 					</div>
 				</div>

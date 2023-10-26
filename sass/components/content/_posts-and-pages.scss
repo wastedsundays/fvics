@@ -76,10 +76,11 @@
 .hero-section {
 	height: 100vh;
 	position: relative;
+	box-shadow: 0 0 20px;
 
 	.post-thumbnail {
 		height: 100%;
-		box-shadow: 0 0 20px;
+		// box-shadow: 0 0 20px;
 
 		img {
 			height: 100%;
@@ -90,6 +91,7 @@
 
 .news-hero-section {
 	height: 50vh;
+	box-shadow: 0 0 20px;
 
 	.post-thumbnail {
 
@@ -184,6 +186,7 @@
 
 	.hero-section {
 		grid-area: hero;
+		box-shadow: 0 0 20px;
 	}
 
 	.article {

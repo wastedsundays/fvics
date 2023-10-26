@@ -256,3 +256,5 @@ function wpse241060_widget_recent_post_4_cpt( $params )
     $params['post_type'] = array( 'post', 'fvics-galleries');
     return $params;
 }
+
+add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
