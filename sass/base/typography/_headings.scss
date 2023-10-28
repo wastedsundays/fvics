@@ -32,10 +32,22 @@ h2 {
 	font-size: 1.5rem;
 
 		@media screen and (min-width: 1100px) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		
 	}
 }
+
+.tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+	font-size: 1.25rem !important;
+	font-family: $font__heading !important;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+	#secondary .tribe-events-widget-events-list__header-title.tribe-common-h6.tribe-common-h--alt {
+		font-size: 1.1rem !important;
+	}
+
 
 h3, .hero-link-button, .hero-excerpt {
 	// font-size: 1.5rem;

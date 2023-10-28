@@ -1,6 +1,14 @@
 p {
 	margin-bottom: 1.5em;
 	line-height: 2;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 1.1rem;
+	}
+
+	@media screen and (min-width: 1600px) {
+		font-size: 1.2rem;
+	}
 }
 
 main {

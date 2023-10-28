@@ -28,7 +28,7 @@ get_header();
 
 						// Check rows existexists.
 						if( have_rows('director_entry') ):
-							?><div><?php
+							?><div class="directors-bio"><?php
 							// Loop through rows.
 							while( have_rows('director_entry') ) : the_row();
 			
