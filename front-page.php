@@ -239,7 +239,13 @@ $pagenum = 114;
 
                   while ( $gallery_query -> have_posts() ) {
                      $gallery_query -> the_post();
+                     ?>
+                     <a href="<?php the_permalink(); ?>">
+                     <?php
                      the_post_thumbnail( 'full' );
+                     ?>
+                     </a>
+                     <?php
                   }
                   wp_reset_postdata();
                } 
@@ -261,7 +267,7 @@ $pagenum = 114;
          <div class="grid-text other-grid-text grid-reverse">
             <h3>Our Directors</h3>
             <p><?php the_field('directors_section_message', $pagenum); ?></p>
-            <a href='' class='link-button'>Meet our directors</a>
+            <a href="directors" class='link-button'>Meet our directors</a>
          </div>
          <div class="grid-image">
             <?php 
