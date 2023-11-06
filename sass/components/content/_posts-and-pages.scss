@@ -464,3 +464,43 @@
 		
 	}
 }
+
+aside {
+
+	h4 {
+		margin-top: 0;
+	}
+
+	.tribe-events-widget {
+		margin-top: 0;
+	}
+
+	display: block;
+
+	@media screen and (min-width: 600px) {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		
+	}
+
+	@media screen and (min-width: 800px) {
+		grid-template-columns: 33% 33% 33%;
+		
+	}
+
+	@media screen and (min-width: 1400px) {
+		display: block;
+		
+	}
+
+	.widget_search {
+		grid-column-start: 1;
+		grid-column-end: 3;
+
+		@media screen and (min-width: 800px) {
+			grid-column-end: 4;
+			
+		}
+	}
+
+}
