@@ -250,11 +250,12 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 
-add_filter( 'widget_posts_args', 'wpse241060_widget_recent_post_4_cpt' );
-function wpse241060_widget_recent_post_4_cpt( $params )
-{
-    $params['post_type'] = array( 'post', 'fvics-galleries');
-    return $params;
+// Adds ownersbox and match-article to the recent posts widget
+function myorg_recentposts_events($args, $instance) {
+	$args['post_type'] = array('post','fvics-galleries');
+	return $args;
 }
+add_filter('widget_posts_args', 'myorg_recentposts_events', 1, 2);
+
 
 add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );

@@ -466,6 +466,11 @@
 }
 
 aside {
+	background-color: white;
+	margin: 6rem 1rem 1rem;
+	padding: 2rem 1rem;
+	box-shadow: 0 0 10px;
+	position: relative;
 
 	h4 {
 		margin-top: 0;
@@ -503,4 +508,17 @@ aside {
 		}
 	}
 
+}
+
+
+.tribe-events-calendar-month, .tribe-events-calendar-list, .tribe-events-calendar-day {
+	background-color: white !important;
+	position: relative;
+	padding: 1rem 2rem !important;
+	border: 1px solid $color__fvics-green !important;
+	box-shadow: 0 0 20px;
+}
+
+.tribe-events-header__events-bar {
+	box-shadow: 0 0 20px;
 }
