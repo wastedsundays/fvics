@@ -7,7 +7,7 @@ body {
 	position: relative;
 	padding-bottom: 1rem;
 }
-#primary::before, .tribe-events-view::before {    
+#primary::before {    
 	content: "";
 	background-image: url('fonts/wallpaper.jpg');
 	// background-size: cover;

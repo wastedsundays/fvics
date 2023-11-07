@@ -519,6 +519,17 @@ aside {
 	box-shadow: 0 0 20px;
 }
 
+.tribe-events-calendar-day {
+	display: none !important;
+}
+
+.tribe-events-calendar-day:has(div) {
+	display: block !important;
+}
+
 .tribe-events-header__events-bar {
-	box-shadow: 0 0 20px;
+	@media screen and (min-width: 785px) {
+		box-shadow: 0 0 20px;
+	}
+
 }
