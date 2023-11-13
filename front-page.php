@@ -188,41 +188,52 @@ $pagenum = 114;
    <!-- Events Section -->
    <section class="page-section double-section">
       <h2 class="home-section-title">Events</h2>
-      <div class="home-page-grid  home-grid-left">
-         <div class="grid-text other-grid-text grid-reverse">
-            <?php
-               $home_query = new WP_Query( 'pagename=home' );
-               while ( $home_query->have_posts() ) : $home_query->the_post();
-                  the_content();
-               endwhile;
-               wp_reset_postdata();
-            ?>
-         </div>
-         
-         <div class="grid-image news-link">
-            <?php
-               $args = array(
-                  'post_type' => 'tribe_events',
-                  'posts_per_page' => 1
-               );
-               $event_query = new WP_Query( $args );
-
-               if ( $event_query -> have_posts() ) {
-
-                  while ( $event_query -> have_posts() ) {
-                     $event_query -> the_post();
-            ?>
-            <a href="<?php the_permalink();?>">
-               <?php the_post_thumbnail( 'full' );?>
-               <h3 class="article-thumb-title"><?php the_title(); ?></h3>                    
-            </a>
-            <?php
-                  }
+      <?php 	
+      // hiding the current events module if there are no current events
+         $countofevents = tribe_get_events(array('ends_after' => 'now'));
+         if (count($countofevents) > 0) {
+      ?>
+            <div class="home-page-grid  home-grid-left">
+            <div class="grid-text other-grid-text grid-reverse">
+               <?php
+                  $home_query = new WP_Query( 'pagename=home' );
+                  while ( $home_query->have_posts() ) : $home_query->the_post();
+                     the_content();
+                  endwhile;
                   wp_reset_postdata();
-               } 
-            ?>
+               ?>
+            </div>
+            
+            <div class="grid-image news-link">
+               <?php
+                  $args = array(
+                     'post_type' => 'tribe_events',
+                     'posts_per_page' => 1
+                  );
+                  $event_query = new WP_Query( $args );
+   
+                  if ( $event_query -> have_posts() ) {
+   
+                     while ( $event_query -> have_posts() ) {
+                        $event_query -> the_post();
+               ?>
+               <a href="<?php the_permalink();?>">
+                  <?php the_post_thumbnail( 'full' );?>
+                  <h3 class="article-thumb-title"><?php the_title(); ?></h3>                    
+               </a>
+               <?php
+                     }
+                     wp_reset_postdata();
+                  } 
+               ?>
+            </div>
          </div>
-      </div>
+      <?php           
+
+         };
+
+      ?>
+
 
       <!-- Events Recaps -->
       <div class="home-page-grid home-grid-right">
