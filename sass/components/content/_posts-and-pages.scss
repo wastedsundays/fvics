@@ -282,7 +282,23 @@
 		margin: 6rem 1rem 1rem;
 		padding: 2rem 1rem;
 		box-shadow: 0 0 10px;
+		display: block;
 
+		@media screen and (min-width: 600px) {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			
+		}
+	
+		@media screen and (min-width: 800px) {
+			grid-template-columns: 33% 33% 33%;
+			
+		}
+	
+		@media screen and (min-width: 1400px) {
+			display: block;
+			
+		}
 	}
 }
 
@@ -495,10 +511,10 @@ aside {
 		
 	}
 
-	@media screen and (min-width: 1400px) {
-		display: block;
+	// @media screen and (min-width: 1400px) {
+	// 	display: block;
 		
-	}
+	// }
 
 	.widget_search {
 		grid-column-start: 1;

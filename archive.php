@@ -70,12 +70,15 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+		if ( !is_post_type_archive() ) {
+			get_sidebar();
+			}
 		?>
 
 	</main><!-- #main -->
 
 <?php
-if ( !is_post_type_archive() ) {
-get_sidebar();
-}
+// if ( !is_post_type_archive() ) {
+// get_sidebar();
+// }
 get_footer();

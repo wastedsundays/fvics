@@ -259,3 +259,26 @@ add_filter('widget_posts_args', 'myorg_recentposts_events', 1, 2);
 
 
 add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
+
+function change_post_menu_label() {
+	global $menu;
+	$menu[5][0] = 'News';
+}
+
+add_action ('admin_menu','change_post_menu_label');
+
+
+function custom_menu_page_removing() {
+	if (!is_admin()) {
+    	remove_menu_page( 'edit-comments.php' );
+		remove_menu_page( 'tools.php' );
+		//Hide the "Kadence Blocks" menu.
+		remove_menu_page('kadence-blocks');
+		//Hide the "Kadence Blocks → Settings" menu.
+		remove_submenu_page('kadence-blocks', 'kadence-blocks');
+		//Hide the "Kadence Blocks → All Forms" menu.
+		remove_submenu_page('kadence-blocks', 'edit.php?post_type=kadence_form');
+	}
+
+}
+add_action( 'admin_init', 'custom_menu_page_removing' );
