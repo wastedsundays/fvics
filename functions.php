@@ -269,7 +269,9 @@ add_action ('admin_menu','change_post_menu_label');
 
 
 function custom_menu_page_removing() {
-	if (!is_admin()) {
+	global $user_ID;
+
+	if ( $user_ID != 1 ) {
     	remove_menu_page( 'edit-comments.php' );
 		remove_menu_page( 'tools.php' );
 		//Hide the "Kadence Blocks" menu.
@@ -282,3 +284,33 @@ function custom_menu_page_removing() {
 
 }
 add_action( 'admin_init', 'custom_menu_page_removing' );
+
+//change link on login page
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+
+
+//change login logo
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/fvics_header_logo.svg);
+		height:140px;
+		width:320px;
+		background-size: 320px 140px;
+		background-repeat: no-repeat;
+        filter: drop-shadow(0 0 20px);
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/styles/style-login.css' );
+    // wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/styles/style-login.js' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );

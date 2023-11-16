@@ -1,0 +1,21 @@
+form#loginform {
+    box-shadow: 0 0 20px;
+    background-color: white;
+    position: relative;
+}
+
+body.login::before {
+		content: "";
+		background-image: url('../fonts/wallpaper.jpg');
+		background-size: cover;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		opacity: 0.35;
+}
+
+body.login #nav, body.login #backtoblog, body.login .language-switcher {
+    position: relative;
+}

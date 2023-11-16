@@ -19,8 +19,25 @@ body {
 	opacity: 0.35;
 }
 
+.post-type-archive-tribe_events {
+	.tribe-events::before {
+		content: "";
+		background-image: url('fonts/wallpaper.jpg');
+		// background-size: cover;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		opacity: 0.35;
+	}
+}
+
 .page-section, article {
 	position: relative;
 }
 
+.body.login div#login form#loginform {
+	box-shadow: 0 0 20px black !important;
+}
 
