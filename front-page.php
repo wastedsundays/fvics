@@ -24,7 +24,7 @@ $pagenum = 114;
          $carouselargs = array(
             'post_type' => $posttypes,
             // 'category_name' => 'featured',
-            'posts_per_page' => 4
+            'posts_per_page' => get_field('news_articles_to_show', $pagenum)
          );
 
          $carousel_query = new WP_Query( $carouselargs );
@@ -58,10 +58,11 @@ $pagenum = 114;
 
          $eventargs = array(
             'post_type' => 'tribe_events',
-            'posts_per_page' => 3,
+            'posts_per_page' => get_field('events_to_show', $pagenum),
 
          );
 
+         if (get_field('show_events', $pagenum)) {
          $eventscarousel_query = new WP_Query( $eventargs );
 
          if ( $eventscarousel_query -> have_posts() ) {
@@ -87,23 +88,22 @@ $pagenum = 114;
             }
             wp_reset_postdata();
          } 
+      } //closes the if loop on the show events option
       ?>
 
-      <!--Slide One-->
-      <div class="card">
-      <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
-         <div class="card-body">
-            <p class="hero-title">Join Us</p>
-            <p class="hero-excerpt">Become a Member Today</p>
-            <a href="join" class="hero-link-button">
-               <?php if(get_post_type() === 'tribe_events') {
-                  ?>Register<?php 
-                  }else {
-                     ?>See More<?php
-                  };?>
-            </a>
+      <!--Join Us Slide-->
+      <?php if (get_field('show_join', $pagenum)) { ?>
+         <div class="card">
+         <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
+            <div class="card-body">
+               <p class="hero-title">Join Us</p>
+               <p class="hero-excerpt">Become a Member Today</p>
+               <a href="join" class="hero-link-button">
+                  See More
+               </a>
+            </div>
          </div>
-      </div>
+      <?php }; //closes the if loop for the show join option ?>
 
    </div>
 
