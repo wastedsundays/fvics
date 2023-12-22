@@ -250,7 +250,7 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 
-// Adds ownersbox and match-article to the recent posts widget
+// Adds to recent posts widget
 function myorg_recentposts_events($args, $instance) {
 	$args['post_type'] = array('post','fvics-galleries');
 	return $args;
