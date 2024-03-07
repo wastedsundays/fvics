@@ -314,3 +314,14 @@ function my_login_stylesheet() {
     // wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/styles/style-login.js' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+
+add_filter(
+    'tribe_events_views_v2_show_latest_past_events_view',
+    function( $show, $view_slug, $view_object ) {
+        // We want to disable them all!
+        return false;
+    },
+    10,
+    3
+);

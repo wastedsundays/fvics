@@ -22,12 +22,11 @@ get_header();
 					?>
 				</h1>
 			</header><!-- .page-header -->
-
+			<div class="search-page-grid">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
 				/**
 				 * Run the loop for the search to output the results.
 				 * If you want to overload this in a child theme then include a file
@@ -44,9 +43,10 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		get_sidebar();
+		// get_sidebar();
 		?>
-
+		</div>
+		<?php get_sidebar();?>
 	</main><!-- #main -->
 
 <?php

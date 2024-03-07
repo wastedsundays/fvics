@@ -28,7 +28,6 @@ $pagenum = 114;
          );
 
          $carousel_query = new WP_Query( $carouselargs );
-
          if ( $carousel_query -> have_posts() ) {
 
             while ( $carousel_query -> have_posts() ) {
@@ -40,7 +39,7 @@ $pagenum = 114;
             <p class="hero-title"><?php the_title(); ?></p>
             <a href="<?php the_permalink();?>" class="hero-link-button">
                <?php if(get_post_type() === 'tribe_events') {
-                  ?>Register<?php 
+                  ?>See More<?php 
                   }else {
                      ?>See More<?php
                   };?>
@@ -77,7 +76,7 @@ $pagenum = 114;
             <p class="hero-excerpt"><?php echo get_the_excerpt(); ?></p>
             <a href="<?php the_permalink();?>" class="hero-link-button">
                <?php if(get_post_type() === 'tribe_events') {
-                  ?>Register<?php 
+                  ?>See More<?php 
                   }else {
                      ?>See More<?php
                   };?>
