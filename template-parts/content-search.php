@@ -27,6 +27,7 @@
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="link-button">Read more &raquo;</a>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">

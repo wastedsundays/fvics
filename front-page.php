@@ -93,7 +93,13 @@ $pagenum = 114;
       <!--Join Us Slide-->
       <?php if (get_field('show_join', $pagenum)) { ?>
          <div class="card">
-         <img src="http://localhost/fvics/wp-content/uploads/2023/08/canmandawe-ftTsK4QinMw-unsplash-scaled.jpg" alt="alt-text">
+         <?php 
+               $image = get_field('join_us_image', $pagenum);
+               $size = 'full';
+               if( $image ) {
+               echo wp_get_attachment_image( $image, $size);
+               }
+         ?>
             <div class="card-body">
                <p class="hero-title">Join Us</p>
                <p class="hero-excerpt">Become a Member Today</p>
